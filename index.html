@@ -1,44 +1,117 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
-      body {
-        margin: 0;
-      }
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        /* 
+        * {
+            border: 1px solid black;
+        } */
+        .yinYing {
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .baiSe {
+            background-color: white;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .flex1 {
+            flex: 1
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .daoHan {
+            border-bottom: 1px solid #999;
+            padding: 10px 10px;
+            font-size: 14px;
+            color: #666;
+        }
     </style>
-  </head>
-  <body>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 40px;
-    ">
-      <img src='https://s1.ax1x.com/2023/08/09/pPZ3CwT.jpg' alt="错误" width="250" height="150">
+</head>
+
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div class="flex column baiSe yinYing" style="width:200px; z-index: 2;">
+        <!-- 头像区 -->
+        <div class="flex" style="padding:10px; justify-content: center; align-items: center;
+          border-bottom: 1px solid #999; height:40px;">
+            <img src="https://kangwenchang.com/logo.png" width="40px" height="40px">
+            <p style="margin-left: 10px;">彭于晏</p>
+        </div>
+        <!-- 导航栏 -->
+        <div>
+            <p class="daoHan">导航</p>
+            <p class="daoHan">导航</p>
+            <p class="daoHan">导航</p>
+            <p class="daoHan">导航</p>
+        </div>
     </div>
-    <div style="
-      max-width:700px;
-      margin:30px auto;
-      padding:15px;
-      line-height:1.7;
-    ">
-      <p>额我认为</p>
-      <p>hhh</p>
-      <p>hhh</p>
-      <p>hhh</p>
-      <p>hhh</p>
+    <!-- 主区域 -->
+    <div class="flex column flex1">
+        <!-- 头部栏 -->
+        <div style="height:60px; z-index: 1;" class="baiSe yinYing"></div>
+        <!-- 下区域 -->
+        <div class="flex flex1 yinYing" style="overflow: auto;">
+            <!-- 左区域 -->
+            <div class="flex column mg8" style="flex:3">
+                <!-- 数据区 -->
+                <div class="flex">
+                    <!-- 数据块 -->
+                    <div class="flex flex1 baiSe mgr8 yinYing" style="height: 100px;"></div>
+                    <div class="flex flex1 baiSe mgr8 yinYing" style="height: 100px;"></div>
+                    <div class="flex flex1 baiSe mgr8 yinYing" style="height: 100px;"></div>
+                    <div class="flex flex1 baiSe yinYing" style="height: 100px;"></div>
+                </div>
+                <!-- 列表区 -->
+                <div class="flex column">
+                    <!-- 列表块 -->
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+                </div>
+            </div>
+            <!-- 右区域 -->
+            <div class="flex column mgr8 mgt8" style="flex:1">
+                <!-- 提示区 -->
+                <div style="height: 150px;" class="baiSe yinYing"></div>
+                <!-- 消息区 -->
+                <div style="height:300px" class="baiSe mgt8 yinYing"></div>
+            </div>
+        </div>
     </div>
-	  <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 40px;
-      font-size: 12px;
-    ">
-    <p>我的网站</p>
-    <a href="https://meicu_o.gitee.io/">个人博客</a>
-    </div>
-    <div></div>
-  </body>
+
+</body>
+
 </html>
